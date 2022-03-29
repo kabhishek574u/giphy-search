@@ -1,0 +1,153 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.serachPage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1140px;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 75px;
+  justify-content: center;
+}
+
+.serachContainer {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  margin: 24px 0;
+  padding-bottom: 12px;
+  position: relative;
+  height: fit-content;
+}
+
+.inputField {
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 12px;
+  flex: 1;
+  font-size: 16px;
+}
+.suggestionList {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background: #ffffff;
+  top: calc(100% - 20px);
+  left: 14px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  height: fit-content;
+  max-width: 300px;
+  p {
+    color: #666666;
+    font-size: 12px;
+    padding: 0 16px 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li {
+      font-size: 12px;
+      padding: 5px 16px;
+      cursor: pointer;
+      color: #999999;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      box-sizing: border-box;
+      &:hover {
+        background: #eeeeee;
+      }
+    }
+  }
+}
+.searchButton {
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 8px;
+  color: #ffffff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.searchResults {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchCard {
+  display: flex;
+  flex-direction: column;
+  width: calc(33% - 24px);
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+  img {
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: calc(100% - 50px);
+  }
+  &:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: scale(1.05);
+    background: #ffffff;
+  }
+}
+.loaderContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.loaderImg {
+  width: 200px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 8px 0;
+  background: #ffffff;
+  p {
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .serachPage {
+    width: 100%;
+  }
+  .searchCard {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 24px);
+  }
+}
